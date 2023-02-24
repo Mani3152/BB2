@@ -1,0 +1,2937 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Oct 17, 2022 12:15:15 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Oct 17, 2022 12:15:15 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Oct 17, 2022 12:23:29 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='91%'><b>45</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='8%'><b>4</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='98%'><b>245</b> steps passed</small></div>
+<div>
+<small data-tooltip='1%'><b>4</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"feature to see New Asset":492.635
+};
+</script>
+<div class="row">
+<div class="col-md-4 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@CreateAsset</td>
+<td>45</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>90%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 45,
+failChild: 4,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 245,
+failGrandChild: 4,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@CreateAsset</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">feature to see New Asset</p>
+            <p class="text-sm">
+              <span>12:15:17 PM</span> / <span>00:08:12:635</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">feature to see New Asset</h5>
+<span class='badge badge-success'>10.17.2022 12:15:17</span>
+<span class='badge badge-danger'>10.17.2022 12:23:29</span>
+<span class='badge badge-default'>00:08:12:635</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>create new asset</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testc" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows2.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!A1" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testc" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testf" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows5.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Cashflow_Import_TemplateSheet Not Found" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testf" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testg" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows6.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!D11" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testg" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testh" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows7.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!E25" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testh" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testj" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows9.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!D1" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testj" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Teste" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows4.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Cashflow_Import_TemplateSheet Not Found" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Teste" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testb" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Portfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows1.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Cashflow_Import_TemplateSheet Not Found" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testb" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="24"><span class="badge log fail-bg mr-2">Fail</span>create new asset</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkd" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Portfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" "Asset created successfully"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <img _ngcontent-jyf-c186="" src="http://realpage.vassarlabs.com/modelfiles/image/c8b8b359-f8db-4337-9ec6-4814af50eba8_v_1.jpeg" alt="Selenium Testa" title="Selenium Testa"> is not clickable at point (1205, 412). Other element would receive the click: <div _ngcontent-jyf-c162="" class="loader-container">...</div>
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5edc6230b6e6e4db309af6d11deec26e, clickElement {id=9a424294-9144-4e13-bf81-60fe282ac849}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.RGPaTg}, goog:chromeOptions: {debuggerAddress: localhost:44065}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44065/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (5edc6230b6e6e4db309af6d11deec26e)] -> xpath: //img[@title='Selenium Testa']]
+Session ID: 5edc6230b6e6e4db309af6d11deec26e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at com.pages.CreateAssetPage.clickOnparticularAsset(CreateAssetPage.java:322)
+	at stepdefinitions.CreateAssetSteps.enter_Details_Into_tenantsTab(CreateAssetSteps.java:44)
+	at ✽.Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" "Asset created successfully"(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/Regressionfeatures/1_CreateAsset.feature:9)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>create_new_asset
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="25"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testi" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows8.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!G11" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testi" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="26"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testd" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows3.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!C1" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testd" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="60"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testk" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows10.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!E1" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testk" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="66"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testl" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows11.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!B1" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testl" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="78"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testm" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset error files/cashflows/SA_Cashflows12.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "File template mismatch at Cashflow_Import_Template!G17" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testm" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="88"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testn" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions_1.xlsx" "Success" "Asset sheet not found"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testn" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="97"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testo" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions2.xlsx" "Success" "File template mismatch at Vassardemodata_template!A1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testo" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="104"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testp" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions3.xlsx" "Success" "File template mismatch at Vassardemodata_template!D1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testp" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="115"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions4.xlsx" "Success" "Asset sheet not found"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="123"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions5.xlsx" "Success" "Asset sheet not found"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="131"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions6.xlsx" "Success" "File template mismatch at Vassardemodata_template!B2"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="138"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions7.xlsx" "Success" "File template mismatch at Vassardemodata_template!U2"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="158"><span class="badge log fail-bg mr-2">Fail</span>create new asset</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions8.xlsx" "Success" "File template mismatch at Vassardemodata_template!V2"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5dc34d7308f824d0489602c14c88b26d, findElement {using=xpath, value=//img[@title='Selenium Testq']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.AzxUlP}, goog:chromeOptions: {debuggerAddress: localhost:40481}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40481/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5dc34d7308f824d0489602c14c88b26d
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.CreateAssetPage.clickOnparticularAsset(CreateAssetPage.java:321)
+	at stepdefinitions.CreateAssetSteps.enter_Details_Into_tenantsTab(CreateAssetSteps.java:44)
+	at ✽.Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/Regressionfeatures/1_CreateAsset.feature:9)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.CreateAssetPage.clickOnparticularAsset(CreateAssetPage.java:321)
+	at stepdefinitions.CreateAssetSteps.enter_Details_Into_tenantsTab(CreateAssetSteps.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor106.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at jdk.internal.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>create_new_asset
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded2.png' src="../embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="166"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions9.xlsx" "Success" "File template mismatch at Vassardemodata_template!AA2"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="177"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions10.xlsx" "Success" "File template mismatch at Vassardemodata_template!G1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="188"><span class="badge log fail-bg mr-2">Fail</span>create new asset</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions11.xlsx" "Success" "File template mismatch at Vassardemodata_template!AB1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5479bd187e93207691bc73ac6115d607, findElement {using=xpath, value=//img[@title='Selenium Testq']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.nUjrIA}, goog:chromeOptions: {debuggerAddress: localhost:43171}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:43171/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5479bd187e93207691bc73ac6115d607
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.CreateAssetPage.clickOnparticularAsset(CreateAssetPage.java:321)
+	at stepdefinitions.CreateAssetSteps.enter_Details_Into_tenantsTab(CreateAssetSteps.java:44)
+	at ✽.Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/Regressionfeatures/1_CreateAsset.feature:9)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.CreateAssetPage.clickOnparticularAsset(CreateAssetPage.java:321)
+	at stepdefinitions.CreateAssetSteps.enter_Details_Into_tenantsTab(CreateAssetSteps.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor106.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at jdk.internal.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>create_new_asset
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded3.png' src="../embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="198"><span class="badge log fail-bg mr-2">Fail</span>create new asset</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testq" "9876654sbhbhch" "United States" " H.No#34 Street No:32 " "Los Angels" "New York" "12345" "Industrial" "Development" "200000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset error files/assumptions/SA_Assumptions12.xlsx" "Success" "File template mismatch at Vassardemodata_template!AB2"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5bd17f8859679b00562004f93f5882a, findElement {using=xpath, value=//img[@title='Selenium Testq']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.mLcIXY}, goog:chromeOptions: {debuggerAddress: localhost:39373}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39373/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d5bd17f8859679b00562004f93f5882a
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.CreateAssetPage.clickOnparticularAsset(CreateAssetPage.java:321)
+	at stepdefinitions.CreateAssetSteps.enter_Details_Into_tenantsTab(CreateAssetSteps.java:44)
+	at ✽.Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/Regressionfeatures/1_CreateAsset.feature:9)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.CreateAssetPage.clickOnparticularAsset(CreateAssetPage.java:321)
+	at stepdefinitions.CreateAssetSteps.enter_Details_Into_tenantsTab(CreateAssetSteps.java:44)
+	at jdk.internal.reflect.GeneratedMethodAccessor106.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at jdk.internal.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>create_new_asset
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded4.png' src="../embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="206"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans1.xlsx" "Loan sheet not found"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="220"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans2.xlsx" "File template mismatch at Loan!A1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="227"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans3.xlsx" "File template mismatch at Loan!D1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="238"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans4.xlsx" "Cashflow_Import_Template sheet not found"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="241"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans5.xlsx" "File template mismatch at Loan!D1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="253"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans6.xlsx" "File template mismatch at Loan!F1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="271"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans7.xlsx" "File template mismatch at Loan!E13"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="287"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans8.xlsx" "File template mismatch at Loan!J11"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="308"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans9.xlsx" "File template mismatch at Loan!I1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="316"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans10.xlsx" "File template mismatch at Loan!F1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="319"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans11.xlsx" "File template mismatch at Loan!L13"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="324"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset error files/loans/SA_Loans12.xlsx" "Loan sheet not found"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="329"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants1.xlsx" "Loan sheet not found" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="347"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants2.xlsx" "File template mismatch at Leasing_commercial!A1" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="357"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants3.xlsx" "File template mismatch at Leasing_commercial!D1" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="379"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants4.xlsx" "No excel sheet found with missing columns mentioned" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="385"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants5.xlsx" "File template mismatch at Leasing_commercial!I1" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="392"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants6.xlsx" "File template mismatch at Leasing_commercial!G1" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="395"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants7.xlsx" "File template mismatch at Leasing_commercial!J5" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="401"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants8.xlsx" "File template mismatch at Leasing_commercial!K6" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="409"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants9.xlsx" "File template mismatch at Leasing_commercial!D4" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="427"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants10.xlsx" "File template mismatch at Leasing_commercial!Q5" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="437"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants11.xlsx" "File template mismatch at Leasing_commercial!D6" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="455"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkda" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "1000000" "Alexander Cato" "Fund V" "Porfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "12543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Success" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Success"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset error files/tenants/SA_Tenants12.xlsx" "File template mismatch at Leasing_commercial!N5" "Selenium Testa" ""</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>45</span>
+<span class='badge log badge-danger'>5</span>
+</span>
+<p class="name">@CreateAsset</p>
+<p class="duration text-sm">50 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@CreateAsset</h4>
+<span status="pass" class='badge log pass-bg'>45 passed</span>
+<span status="fail" class='badge log badge-danger'>5 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='4'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='18'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='24'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='25'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='26'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:15:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='60'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='66'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='78'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='88'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='97'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='104'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='115'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='123'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='131'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='138'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:16:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='158'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:16:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='166'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:17:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='177'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:17:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='188'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:17:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='198'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:17:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='206'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:17:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='220'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:17:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='227'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:17:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='238'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:17:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='241'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:17:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='253'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:18:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='271'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:18:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='287'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:18:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='308'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:18:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='316'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:18:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='319'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:18:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='324'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:18:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='329'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:19:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='347'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:19:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='357'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:19:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='379'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:19:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='385'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:19:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='392'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:19:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='395'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:19:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='401'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:19:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='409'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:20:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='427'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:20:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='437'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:20:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='455'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.TimeoutException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:17:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='247'>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset.Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:18:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='276'>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset.Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:18:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='281'>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset.Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testq" ""</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:15:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='63'>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" "Asset created successfully"</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset.Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Success" "Selenium Testa" "Asset created successfully"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -1,0 +1,2198 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Oct 16, 2022 08:11:08 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Oct 16, 2022 08:11:08 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Oct 16, 2022 08:12:26 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='100%'><b>25</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='20%'><b>25</b> steps passed</small></div>
+<div>
+<small data-tooltip='20%'><b>25</b> steps failed,
+<b>75</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Mutli asset imports":75.968
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 25,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 25,
+failGrandChild: 25,
+warningGrandChild: 0,
+skipGrandChild: 75,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Mutli asset imports</p>
+            <p class="text-sm">
+              <span>20:11:10 PM</span> / <span>00:01:15:968</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Mutli asset imports</h5>
+<span class='badge badge-success'>10.16.2022 20:11:10</span>
+<span class='badge badge-danger'>10.16.2022 20:12:26</span>
+<span class='badge badge-default'>00:01:15:968</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2ccc7c3146be87795c63f1ffe8dafa9, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.pRE7I2}, goog:chromeOptions: {debuggerAddress: localhost:39707}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39707/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c2ccc7c3146be87795c63f1ffe8dafa9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 04.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!A1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!A1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded7.png' src="../embedded7.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="4"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0b924490f08c6d769afbec2bcd424bf3, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.o7LyVf}, goog:chromeOptions: {debuggerAddress: localhost:45465}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:45465/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b924490f08c6d769afbec2bcd424bf3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 03.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_ResidentialOccupancy!B1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_ResidentialOccupancy!B1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded6.png' src="../embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="6"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [32452ac72bf89abaed50d92b82a29f43, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.Rx9xth}, goog:chromeOptions: {debuggerAddress: localhost:32879}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:32879/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 32452ac72bf89abaed50d92b82a29f43
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 09.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!A6"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!A6"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded3.png' src="../embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="7"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aa279303444e0e9a6b9c62ff38ceef5a, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.VXrd2t}, goog:chromeOptions: {debuggerAddress: localhost:36311}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36311/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: aa279303444e0e9a6b9c62ff38ceef5a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 07.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!F1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!F1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded8.png' src="../embedded8.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="9"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [27d3d1f838fc932a4748b879aa0a06ee, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.y4jUvl}, goog:chromeOptions: {debuggerAddress: localhost:40173}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40173/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 27d3d1f838fc932a4748b879aa0a06ee
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 10.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!F21"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!F21"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded2.png' src="../embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="12"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0c69c2f88ec1cc6c3421b26b59b850df, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.sslD28}, goog:chromeOptions: {debuggerAddress: localhost:37001}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37001/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c69c2f88ec1cc6c3421b26b59b850df
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 02.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Tenant Import file should contain Leasing_Commercial, LeaseOption, TenantMasterTenant_Mapping, Leasing_ResidentialOccupancy, ResidentialUnitMix sheets"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Tenant Import file should contain Leasing_Commercial, LeaseOption, TenantMasterTenant_Mapping, Leasing_ResidentialOccupancy, ResidentialUnitMix sheets"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="16"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ba643db057083ff6bdc934d502fbc2c2, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.VVcwVx}, goog:chromeOptions: {debuggerAddress: localhost:40109}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40109/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ba643db057083ff6bdc934d502fbc2c2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 01.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_Commercial!A1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_Commercial!A1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded9.png' src="../embedded9.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="20"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [70332391d4a180bacf2b38c1c93c80b7, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.VMi0lr}, goog:chromeOptions: {debuggerAddress: localhost:37765}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37765/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 70332391d4a180bacf2b38c1c93c80b7
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 05.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!E1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!E1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded4.png' src="../embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="26"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [403cb238dcfac6dc27eec1d2b94752da, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.pr95lc}, goog:chromeOptions: {debuggerAddress: localhost:36549}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36549/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 403cb238dcfac6dc27eec1d2b94752da
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 08.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!G1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!G1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded10.png' src="../embedded10.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c211a32e0d36ad480990435523418644, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.nVvj6Y}, goog:chromeOptions: {debuggerAddress: localhost:45439}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:45439/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c211a32e0d36ad480990435523418644
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 06.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Tenant Import file should contain Leasing_Commercial, LeaseOption, TenantMasterTenant_Mapping, Leasing_ResidentialOccupancy, ResidentialUnitMix sheets"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Tenant Import file should contain Leasing_Commercial, LeaseOption, TenantMasterTenant_Mapping, Leasing_ResidentialOccupancy, ResidentialUnitMix sheets"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded5.png' src="../embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="83"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5640f45f587cd989ad7e4e249a6c3b7, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.BwWGo3}, goog:chromeOptions: {debuggerAddress: localhost:44039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44039/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d5640f45f587cd989ad7e4e249a6c3b7
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 12.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at TenantMasterTenant_Mapping!B5"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at TenantMasterTenant_Mapping!B5"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded11.png' src="../embedded11.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="86"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f65b33f74b7729699c934d69b698cfa, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.C8GeyL}, goog:chromeOptions: {debuggerAddress: localhost:32823}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:32823/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f65b33f74b7729699c934d69b698cfa
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 11.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!D27"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!D27"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded13.png' src="../embedded13.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="89"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4fe9d2aca2fe801bd2326dc9898780f6, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.d3cTvc}, goog:chromeOptions: {debuggerAddress: localhost:44079}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44079/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4fe9d2aca2fe801bd2326dc9898780f6
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 13.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!J7"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!J7"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded12.png' src="../embedded12.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="92"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7e0ab2227838e4d8633c9e428577b411, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.pWcc5S}, goog:chromeOptions: {debuggerAddress: localhost:37843}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37843/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e0ab2227838e4d8633c9e428577b411
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 15.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!G5"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!G5"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded14.png' src="../embedded14.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="95"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [93b9eb4f84681505d0f7eeaa253571f5, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.tdDPrY}, goog:chromeOptions: {debuggerAddress: localhost:43635}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:43635/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 93b9eb4f84681505d0f7eeaa253571f5
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 14.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at TenantMasterTenant_Mapping!D11"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at TenantMasterTenant_Mapping!D11"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded18.png' src="../embedded18.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="97"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bcb3e7a4f1a09fa919e12e9e26595893, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.1T6zW1}, goog:chromeOptions: {debuggerAddress: localhost:40151}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40151/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bcb3e7a4f1a09fa919e12e9e26595893
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 16.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!N10"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!N10"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded20.png' src="../embedded20.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="101"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e7e748769383552609e1e66acb4fa3aa, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.7lq7Ha}, goog:chromeOptions: {debuggerAddress: localhost:45969}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:45969/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e7e748769383552609e1e66acb4fa3aa
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 17.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!H10"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!H10"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded19.png' src="../embedded19.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="104"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5ad72d5be98af5852927c956a32e13c, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.RwqNKm}, goog:chromeOptions: {debuggerAddress: localhost:37875}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37875/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d5ad72d5be98af5852927c956a32e13c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 20.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!H5"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!H5"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded15.png' src="../embedded15.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="107"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80bc37b2f1b883952054113fba7173c1, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.IehrcX}, goog:chromeOptions: {debuggerAddress: localhost:37785}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37785/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 80bc37b2f1b883952054113fba7173c1
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 19.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!D1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!D1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded17.png' src="../embedded17.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="109"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34d05aab4bb7345bf55067ba422a45d2, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.NofQEf}, goog:chromeOptions: {debuggerAddress: localhost:34617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34617/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 34d05aab4bb7345bf55067ba422a45d2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 18.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!E1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!E1"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded16.png' src="../embedded16.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="118"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cd5e0c12175c946741b726ab375ec4c3, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.M0e5Pn}, goog:chromeOptions: {debuggerAddress: localhost:33765}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33765/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cd5e0c12175c946741b726ab375ec4c3
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 21.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_Commercial!I6"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_Commercial!I6"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded21.png' src="../embedded21.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="130"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34b659a6c162914adcd1f3449f40c4c6, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.uhh77E}, goog:chromeOptions: {debuggerAddress: localhost:37269}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37269/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 34b659a6c162914adcd1f3449f40c4c6
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 22.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial! : 7"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial! : 7"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded22.png' src="../embedded22.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="134"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76ddeb149eaf4d3be65ea055a3be70e3, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.xBjxYd}, goog:chromeOptions: {debuggerAddress: localhost:45773}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:45773/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 76ddeb149eaf4d3be65ea055a3be70e3
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 23.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!G7"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at leasing_commercial!G7"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded23.png' src="../embedded23.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="142"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da0e84f49a5eaf350c6b459fb224d995, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.i9rtqI}, goog:chromeOptions: {debuggerAddress: localhost:35915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:35915/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: da0e84f49a5eaf350c6b459fb224d995
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 24.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!L5"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "File template mismatch at Leasing_ResidentialOccupancy!L5"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded24.png' src="../embedded24.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="150"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>apphooks.ApplicationHooks.launchBrowser()</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a1069e09a557bbc46cfe5fad72c4b241, get {url=http://realpage.vassarlabs.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.B9Pdbg}, goog:chromeOptions: {debuggerAddress: localhost:38671}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:38671/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a1069e09a557bbc46cfe5fad72c4b241
+	at jdk.internal.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
+	at apphooks.ApplicationHooks.launchBrowser(ApplicationHooks.java:32)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/multi asset error files/Tenants/10Tenant_31-03-2022 - 25.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Tenant Import file should contain Leasing_Commercial, LeaseOption, TenantMasterTenant_Mapping, Leasing_ResidentialOccupancy, ResidentialUnitMix sheets"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Tenant Import file should contain Leasing_Commercial, LeaseOption, TenantMasterTenant_Mapping, Leasing_ResidentialOccupancy, ResidentialUnitMix sheets"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded25.png' src="../embedded25.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.WebDriverException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.WebDriverException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='22'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='24'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='23'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='32'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='18'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='85'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='91'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='88'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='94'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='106'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='111'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='99'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='112'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='100'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:11:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='103'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:12:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='120'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:12:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='132'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:12:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='136'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:12:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='144'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:12:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='152'>apphooks.ApplicationHooks.launchBrowser()</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.apphooks.ApplicationHooks.launchBrowser()</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -1,0 +1,1830 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Oct 20, 2022 07:14:23 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Oct 20, 2022 07:14:23 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Oct 20, 2022 07:21:12 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>10</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>6</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='62%'>
+<b>10</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='37%'><b>6</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='62%'><b>10</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='37%'><b>6</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='81%'><b>49</b> steps passed</small></div>
+<div>
+<small data-tooltip='10%'><b>6</b> steps failed,
+<b>5</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"feature to see New Asset":74.737,"EditAssetPage":64.096,"Mutli asset imports":15.598,"Download Asset Info":13.489,"feature to see Create Loan":16.839,"DataSource Tab":8.596,"feature to see OverviewTab Calculations":29.557,"Add PortFolio":9.299,"Tenant Portfolio Feature":42.794,"Overview Feature in Portfolio":9.07,"Reassign the portfolio feature":6.216,"Add a new Scenario":14.01,"Delete a Lona feature":12.115,"Search Asset in asset Page":7.026,"Loan Portfolio Feature":43.985,"Delete an asset":39.504
+};
+</script>
+<div class="row">
+<div class="col-md-4 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@CreateLoan</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@DEBTTab</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@CreateAsset</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 10,
+failParent: 6,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 10,
+failChild: 6,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 49,
+failGrandChild: 6,
+warningGrandChild: 0,
+skipGrandChild: 5,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@CreateLoan</a><a class="dropdown-item" href="#">@DEBTTab</a><a class="dropdown-item" href="#">@CreateAsset</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">feature to see New Asset</p>
+            <p class="text-sm">
+              <span>19:14:25 PM</span> / <span>00:01:14:737</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">feature to see New Asset</h5>
+<span class='badge badge-success'>10.20.2022 19:14:25</span>
+<span class='badge badge-danger'>10.20.2022 19:15:40</span>
+<span class='badge badge-default'>00:01:14:737</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>create new asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter Details Into OverViewPage "Selenium Testa" "98341r6bdgkd" "United States" " H.No#34 Street No:32 " "Los Angels" "California" "24753" "Industrial" "Operating" "15000000" "Alexander Cato" "Fund V" "Portfolio A" "02-23-2022" "2022" "04-23-2022" "USD" "SQFT" "22543" "Discounted Cash Flow" "/home/uttham-vlit/Downloads/download.jpeg"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into ValutionsPage "/home/uttham-vlit/Downloads/single asset files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/single asset files/Assumptions.xlsx" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Enter Details Into LoansPage "/home/uttham-vlit/Downloads/single asset files/Loans.xlsx" "Excel Sheet Validated successfully"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Enter Details Into TenantsPage "/home/uttham-vlit/Downloads/single asset files/Tenants.xlsx" "Excel Sheet Validated successfully" "Selenium Testa" "Asset created successfully"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">EditAssetPage</p>
+            <p class="text-sm">
+              <span>19:15:40 PM</span> / <span>00:01:04:096</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">EditAssetPage</h5>
+<span class='badge badge-success'>10.20.2022 19:15:40</span>
+<span class='badge badge-danger'>10.20.2022 19:16:44</span>
+<span class='badge badge-default'>00:01:04:096</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>EditAssetPage</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>EditAssetPage</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Opens RealPage  and user clicks on properties goes to a particular asset "Selenium Testa"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When clicks on edit button and edit the values "" "" "" "" "" "" "23452" "" "" "" "" "" "" "" "" "" "" "" "" ""</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then check the updated values "" "" "" "" "" "" "23452" "" "" "" "" "" "" "" "" "" "" "" "" "" "Successfully Updated Asset Details"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Mutli asset imports</p>
+            <p class="text-sm">
+              <span>19:16:44 PM</span> / <span>00:00:15:598</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Mutli asset imports</h5>
+<span class='badge badge-success'>10.20.2022 19:16:44</span>
+<span class='badge badge-danger'>10.20.2022 19:16:59</span>
+<span class='badge badge-default'>00:00:15:598</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="24"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="25"><span class="badge log fail-bg mr-2">Fail</span>Multi Asset Imports</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Go to properties page and click on import button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Tenant.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <h6 _ngcontent-lsg-c186="" class="title">...</h6> is not clickable at point (236, 785). Other element would receive the click: <ngb-modal-window role="dialog" tabindex="-1" aria-modal="true" class="d-block modal modal-offset modal-offset-md right fade show">...</ngb-modal-window>
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b0442643f61cf25e0c8d78271e93de13, clickElement {id=4c46e843-e068-49fe-8a03-58e528aeaa02}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.4OzFex}, goog:chromeOptions: {debuggerAddress: localhost:46043}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:46043/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (b0442643f61cf25e0c8d78271e93de13)] -> xpath: //*[text()='Skyview Apartments']]
+Session ID: b0442643f61cf25e0c8d78271e93de13
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at com.pages.MultiAssetUploadPage.verifyCreatedAssets(MultiAssetUploadPage.java:116)
+	at com.pages.MultiAssetUploadPage.filesUpload(MultiAssetUploadPage.java:83)
+	at stepdefinitions.MultiAssetUploadSteps.upload_the_required_files(MultiAssetUploadSteps.java:21)
+	at ✽.Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Tenant.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully"(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/PositiveFlowFeature/2_MultiAssetUpload.feature:5)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Submit the Data "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Multi_Asset_Imports
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="33"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Download Asset Info</p>
+            <p class="text-sm">
+              <span>19:17:00 PM</span> / <span>00:00:13:489</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Download Asset Info</h5>
+<span class='badge badge-success'>10.20.2022 19:17:00</span>
+<span class='badge badge-danger'>10.20.2022 19:17:13</span>
+<span class='badge badge-default'>00:00:13:489</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="34"><span class="badge log pass-bg mr-2">Pass</span>Download Asset Info</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="35"><span class="badge log pass-bg mr-2">Pass</span>Download Asset Info</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Go to particualr asset "Premium Plaza"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When CLick on download button and select the format "Pdf" "Overview,Valuations,Loans,Tenants"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then CHeck the downloaded file</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="43"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">feature to see Create Loan</p>
+            <p class="text-sm">
+              <span>19:17:13 PM</span> / <span>00:00:16:839</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">feature to see Create Loan</h5>
+<span class='badge badge-success'>10.20.2022 19:17:13</span>
+<span class='badge badge-danger'>10.20.2022 19:17:30</span>
+<span class='badge badge-default'>00:00:16:839</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=43</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>create new Loan</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="45"><span class="badge log pass-bg mr-2">Pass</span>create new Loan</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Go To LoansPage "Selenium Testa"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Create New Loan "Test00012" "Test Loan Fixed" "HSBC" "12323" "Senior" "1st" "Active" "10000000" "6500000" "08/01/2021" "08/01/2031" "Fixed" "3" "360/360" "" "Interest Only" "08/01/2023" "15" "360/360" "12"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click On Add Loan Button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Verify Loan Is Created "Successfully Created Loan" "Test Loan Fixed"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="54"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">DataSource Tab</p>
+            <p class="text-sm">
+              <span>19:17:30 PM</span> / <span>00:00:08:596</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">DataSource Tab</h5>
+<span class='badge badge-success'>10.20.2022 19:17:30</span>
+<span class='badge badge-danger'>10.20.2022 19:17:39</span>
+<span class='badge badge-default'>00:00:08:596</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=54</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="55"><span class="badge log pass-bg mr-2">Pass</span>DataSource Tab Scenario</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.DataSourceSteps.click_on_data_source_tab()">
+                <span>Given Click on DataSource Tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DataSourceSteps.c_lick_on_add_new_data_source()">
+                <span>When CLick on Add New Data Source</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.DataSourceSteps.verify_them()">
+                <span>Then Verify Them</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="63"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">feature to see OverviewTab Calculations</p>
+            <p class="text-sm">
+              <span>19:17:39 PM</span> / <span>00:00:29:557</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">feature to see OverviewTab Calculations</h5>
+<span class='badge badge-success'>10.20.2022 19:17:39</span>
+<span class='badge badge-danger'>10.20.2022 19:18:08</span>
+<span class='badge badge-default'>00:00:29:557</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=63</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="64"><span class="badge log fail-bg mr-2">Fail</span>OverviewTab Calculations</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="65"><span class="badge log fail-bg mr-2">Fail</span>OverviewTab Calculations</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Go To Asset Page For DSCR "Selenium Testa"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Verify DSCR and Occupancy</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then validate DSCR and Occupancy</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='dtBasicExample_length']"}
+  (Session info: headless chrome=103.0.5060.53)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74a0d1efbd31457e0ab34f7335ff9780, findElement {using=xpath, value=//select[@name='dtBasicExample_length']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.oijRng}, goog:chromeOptions: {debuggerAddress: localhost:36979}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36979/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 74a0d1efbd31457e0ab34f7335ff9780
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.DebtPage.occupancyCalculations(DebtPage.java:139)
+	at stepdefinitions.DebtSteps.validate_dscr_and_occupancy(DebtSteps.java:26)
+	at ✽.validate DSCR and Occupancy(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/PositiveFlowFeature/6_OverviewTabCalculations.feature:7)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>OverviewTab_Calculations
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded2.png' src="../embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="73"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add PortFolio</p>
+            <p class="text-sm">
+              <span>19:18:08 PM</span> / <span>00:00:09:299</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add PortFolio</h5>
+<span class='badge badge-success'>10.20.2022 19:18:08</span>
+<span class='badge badge-danger'>10.20.2022 19:18:17</span>
+<span class='badge badge-default'>00:00:09:299</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=73</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="74"><span class="badge log fail-bg mr-2">Fail</span>Portfolio Adding Scenario</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="75"><span class="badge log fail-bg mr-2">Fail</span>Portfolio Adding Scenario</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Go to Portfolio Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Create  New Portfolio "portfolio P" "Mangement" "Seema Kotecha" "New Portfolio Created"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then Verify the created Portfolio "portfolio P"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Expected Name : portfolio PActual Name : Portfolio A expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at com.pages.PortfolioPage.createPortfolio(PortfolioPage.java:50)
+	at stepdefinitions.PortfolioSteps.verify_the_created_portfolio(PortfolioSteps.java:25)
+	at ✽.Verify the created Portfolio "portfolio P"(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/PositiveFlowFeature/7_Portfolio.feature:6)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Portfolio_Adding_Scenario
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded3.png' src="../embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="83"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Tenant Portfolio Feature</p>
+            <p class="text-sm">
+              <span>19:18:17 PM</span> / <span>00:00:42:794</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Tenant Portfolio Feature</h5>
+<span class='badge badge-success'>10.20.2022 19:18:17</span>
+<span class='badge badge-danger'>10.20.2022 19:19:00</span>
+<span class='badge badge-default'>00:00:42:794</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=83</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="84"><span class="badge log fail-bg mr-2">Fail</span>Tenant Portfolio Scenario</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="85"><span class="badge log fail-bg mr-2">Fail</span>Tenant Portfolio Scenario</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Go to portfolio and pick a portfolio "Portfolio A"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Show']//following::select"}
+  (Session info: headless chrome=103.0.5060.53)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b24f879e8b3631f6a8fda0a4e846b1b8, findElement {using=xpath, value=//label[text()='Show']//following::select}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.jMKixx}, goog:chromeOptions: {debuggerAddress: localhost:42559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:42559/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b24f879e8b3631f6a8fda0a4e846b1b8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.TenantsPortfolioPage.tenantsCountinPortfolio(TenantsPortfolioPage.java:136)
+	at stepdefinitions.TenantsPortfolioSteps.go_to_portfolio_and_pick_a_portfolio(TenantsPortfolioSteps.java:23)
+	at ✽.Go to portfolio and pick a portfolio "Portfolio A"(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/PositiveFlowFeature/91_TenantsPortfolio.feature:4)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Go to properties for assets present in the portfolio under the tenants</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify the tenants are updated in the portfolios "Portfolio A"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Tenant_Portfolio_Scenario
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded4.png' src="../embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="93"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Overview Feature in Portfolio</p>
+            <p class="text-sm">
+              <span>19:19:00 PM</span> / <span>00:00:09:070</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Overview Feature in Portfolio</h5>
+<span class='badge badge-success'>10.20.2022 19:19:00</span>
+<span class='badge badge-danger'>10.20.2022 19:19:09</span>
+<span class='badge badge-default'>00:00:09:070</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=93</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="94"><span class="badge log pass-bg mr-2">Pass</span>Scenario to test the fields in Overview Tab for a specifiv Portfolio</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="95"><span class="badge log pass-bg mr-2">Pass</span>Scenario to test the fields in Overview Tab for a specifiv Portfolio</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Go to a Specific Portfolio "Portfolio B"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Get the Data present in portfolio tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Calculate the values</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then compare the metrics</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="104"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Reassign the portfolio feature</p>
+            <p class="text-sm">
+              <span>19:19:09 PM</span> / <span>00:00:06:216</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Reassign the portfolio feature</h5>
+<span class='badge badge-success'>10.20.2022 19:19:09</span>
+<span class='badge badge-danger'>10.20.2022 19:19:16</span>
+<span class='badge badge-default'>00:00:06:216</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=104</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="105"><span class="badge log fail-bg mr-2">Fail</span>Reassign Scenerio for Portfolio</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="106"><span class="badge log fail-bg mr-2">Fail</span>Reassign Scenerio for Portfolio</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Go to portfolios tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Select a portfolio to reassign "Portfolio B"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And reassign the asset to different portfolio "Premium Plaza" "Portfolio A"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//ng-dropdown-panel//span[text()='Premium Plaza']"}
+  (Session info: headless chrome=103.0.5060.53)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [84c2605f3a89c33ac331b6e28397ada3, findElement {using=xpath, value=//ng-dropdown-panel//span[text()='Premium Plaza']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.80PLQo}, goog:chromeOptions: {debuggerAddress: localhost:41163}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41163/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 84c2605f3a89c33ac331b6e28397ada3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.pages.ReassignPortfolioPage.reassignPortfolios(ReassignPortfolioPage.java:35)
+	at stepdefinitions.ReassignPortfolioSteps.reassign_the_asset_to_different_portfolio(ReassignPortfolioSteps.java:34)
+	at ✽.reassign the asset to different portfolio "Premium Plaza" "Portfolio A"(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/PositiveFlowFeature/93_ReassignPortfolio.feature:7)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then check whether the assets are reasigned or not "Portfolio A" "Premium Plaza"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Reassign_Scenerio_for_Portfolio
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded5.png' src="../embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="115"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add a new Scenario</p>
+            <p class="text-sm">
+              <span>19:19:16 PM</span> / <span>00:00:14:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add a new Scenario</h5>
+<span class='badge badge-success'>10.20.2022 19:19:16</span>
+<span class='badge badge-danger'>10.20.2022 19:19:30</span>
+<span class='badge badge-default'>00:00:14:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=115</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="116"><span class="badge log pass-bg mr-2">Pass</span>To create a new Scenario</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="117"><span class="badge log pass-bg mr-2">Pass</span>To create a new Scenario</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Go to a particular asset "Selenium Testa"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Go to Details Tab and click on View Scenriao</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click add Scenerio and give the details "Sel Test1" "yes" "Valuations,Loans,Tenants" "notes" "/home/uttham-vlit/Downloads/SingleAsset_Upload_With_EffectiveDate/SingleAsset_Upload_With_EffectiveDate/SkyView/410SkyView_30-06-2022/Cashflows_30-06-2022.xlsx" "/home/uttham-vlit/Downloads/SingleAsset_Upload_With_EffectiveDate/SingleAsset_Upload_With_EffectiveDate/SkyView/410SkyView_30-06-2022/4Loans_30-06-2022.xlsx" "/home/uttham-vlit/Downloads/SingleAsset_Upload_With_EffectiveDate/SingleAsset_Upload_With_EffectiveDate/SkyView/410SkyView_30-06-2022/10Tenants_30-06-2022.xlsx"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify the created Scenraio "Sel Test1"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="126"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete a Lona feature</p>
+            <p class="text-sm">
+              <span>19:19:30 PM</span> / <span>00:00:12:115</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Delete a Lona feature</h5>
+<span class='badge badge-success'>10.20.2022 19:19:30</span>
+<span class='badge badge-danger'>10.20.2022 19:19:42</span>
+<span class='badge badge-default'>00:00:12:115</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=126</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="127"><span class="badge log pass-bg mr-2">Pass</span>Scenario to delete a loan</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="128"><span class="badge log pass-bg mr-2">Pass</span>Scenario to delete a loan</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Go to an asset "Selenium Testa"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When go to loans and select a loan to delete "Citi Bank Refinance"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then delet the loan and verify "Successfully Deleted Loan"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="136"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Search Asset in asset Page</p>
+            <p class="text-sm">
+              <span>19:19:42 PM</span> / <span>00:00:07:026</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Search Asset in asset Page</h5>
+<span class='badge badge-success'>10.20.2022 19:19:42</span>
+<span class='badge badge-danger'>10.20.2022 19:19:49</span>
+<span class='badge badge-default'>00:00:07:026</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=136</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="137"><span class="badge log pass-bg mr-2">Pass</span>Scenario To Search an Asset</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="138"><span class="badge log pass-bg mr-2">Pass</span>Scenario To Search an Asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Go to assets Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Take all the assets Data</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then enter in search box and check Whether its present or not "pre"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="146"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Loan Portfolio Feature</p>
+            <p class="text-sm">
+              <span>19:19:49 PM</span> / <span>00:00:43:985</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Loan Portfolio Feature</h5>
+<span class='badge badge-success'>10.20.2022 19:19:49</span>
+<span class='badge badge-danger'>10.20.2022 19:20:33</span>
+<span class='badge badge-default'>00:00:43:985</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=146</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="147"><span class="badge log fail-bg mr-2">Fail</span>Loan Portfolio Scenario</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="148"><span class="badge log fail-bg mr-2">Fail</span>Loan Portfolio Scenario</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Go to portfolio and pick the assets "Portfolio B"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When Go to properties</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a _ngcontent-bhp-c238="" href="" ngbnavlink="" id="ngb-nav-13" role="tab" aria-selected="false" aria-disabled="false" class="nav-link">...</a> is not clickable at point (363, 220). Other element would receive the click: <div _ngcontent-bhp-c238="" class="container-fluid">...</div>
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'utthamvlit-Latitude-5580', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-48-generic', java.version: '11.0.16'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7a22a0ab8a6efd665de4b5b87e06209c, clickElement {id=5cf501e1-fb29-45bf-941c-7d354c74a072}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /tmp/.com.google.Chrome.b0ZM0l}, goog:chromeOptions: {debuggerAddress: localhost:33161}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33161/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (7a22a0ab8a6efd665de4b5b87e06209c)] -> xpath: //a[text()='Loans']]
+Session ID: 7a22a0ab8a6efd665de4b5b87e06209c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at com.pages.LoansPortfolioPage.loansCount(LoansPortfolioPage.java:61)
+	at stepdefinitions.LoanPortfolioSteps.go_to_properties(LoanPortfolioSteps.java:30)
+	at ✽.Go to properties(file:///home/uttham-vlit/Desktop/BB2-RealPage/src/test/resources/PositiveFlowFeature/9_LoansPosrtfolio.feature:5)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then verify the loans are updated in the portfolios "Portfolio B"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>apphooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Loan_Portfolio_Scenario
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded6.png' src="../embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="156"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete an asset</p>
+            <p class="text-sm">
+              <span>19:20:33 PM</span> / <span>00:00:39:504</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Delete an asset</h5>
+<span class='badge badge-success'>10.20.2022 19:20:33</span>
+<span class='badge badge-danger'>10.20.2022 19:21:12</span>
+<span class='badge badge-default'>00:00:39:504</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=156</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="157"><span class="badge log pass-bg mr-2">Pass</span>Delete Asset</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="158"><span class="badge log pass-bg mr-2">Pass</span>Delete Asset</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given go to assets page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When sleect an asset "Selenium Testa"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Delete the assset "Successfully Deleted Asset"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@CreateLoan</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@CreateLoan</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:17:13 PM</td>
+<td>
+<a href="#" class="linked" test-id='43' id='44'>create new Loan</a>
+<div class="">
+<span class="badge badge-default">feature to see Create Loan.create new Loan</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:17:13 PM</td>
+<td>
+<a href="#" class="linked" test-id='43' id='45'>create new Loan</a>
+<div class="">
+<span class="badge badge-default">feature to see Create Loan.create new Loan</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@DEBTTab</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@DEBTTab</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:17:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='63' id='64'>OverviewTab Calculations</a>
+<div class="">
+<span class="badge badge-default">feature to see OverviewTab Calculations.OverviewTab Calculations</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:17:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='63' id='65'>OverviewTab Calculations</a>
+<div class="">
+<span class="badge badge-default">feature to see OverviewTab Calculations.OverviewTab Calculations</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@CreateAsset</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@CreateAsset</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:14:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:14:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>create new asset</a>
+<div class="">
+<span class="badge badge-default">feature to see New Asset.create new asset</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:16:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='29'>When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Tenant.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully"</a>
+<div class="">
+<span class="badge badge-default">Mutli asset imports.Multi Asset Imports.When Upload the required Files "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Cashflows.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Overview.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Loans.xlsx" "/home/uttham-vlit/Downloads/Multi Assset Upload Files/Tenant.xlsx" "140 Industrial Dr,Campus Edge,Opengate Industrial,Overland Plaza,Premium Plaza,Skyview Apartments,Sugar Cane Apartments,Venture Tower,Waterview Mall" "Skyview Apartments" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully" "Excel Sheet Validated successfully"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:20:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='146' id='152'>When Go to properties</a>
+<div class="">
+<span class="badge badge-default">Loan Portfolio Feature.Loan Portfolio Scenario.When Go to properties</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:17:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='63' id='70'>Then validate DSCR and Occupancy</a>
+<div class="">
+<span class="badge badge-default">feature to see OverviewTab Calculations.OverviewTab Calculations.Then validate DSCR and Occupancy</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:18:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='83' id='88'>Given Go to portfolio and pick a portfolio "Portfolio A"</a>
+<div class="">
+<span class="badge badge-default">Tenant Portfolio Feature.Tenant Portfolio Scenario.Given Go to portfolio and pick a portfolio "Portfolio A"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:19:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='104' id='111'>And reassign the asset to different portfolio "Premium Plaza" "Portfolio A"</a>
+<div class="">
+<span class="badge badge-default">Reassign the portfolio feature.Reassign Scenerio for Portfolio.And reassign the asset to different portfolio "Premium Plaza" "Portfolio A"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:18:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='73' id='80'>Then Verify the created Portfolio "portfolio P"</a>
+<div class="">
+<span class="badge badge-default">Add PortFolio.Portfolio Adding Scenario.Then Verify the created Portfolio "portfolio P"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
