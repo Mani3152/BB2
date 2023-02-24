@@ -29,7 +29,7 @@ public class AddandDeleteTagsAssetPage {
         for (int i = 0; i < t.length; i++) {
             driver.findElement(add_tag).click();
             driver.findElement(text).sendKeys(t[i]);
-            Thread.sleep(500);
+            Thread.sleep(5000);
             driver.findElement(text1).click();
             Thread.sleep(1000);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
